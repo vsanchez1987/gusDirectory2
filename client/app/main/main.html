@@ -1,0 +1,72 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
+        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>
+
+
+      <div class="container" ng-controller="numberController">
+          <div class="row">
+            <div class="leftColumn col-md-5 col-xs-6"></div>
+            <div class="numOutput col-xs-6"><h3>(650) <span ng-repeat="number in numbers track by $index">{{number}}</span> </h3></div></br>
+            <div class="phonegrid col-md-7">
+
+              <div>
+                <input type="button" class="btn btn-default" ng-click="addNumber(1);" value="1">
+                <input type="button" class="btn btn-default" ng-click="addNumber(2);" value="2">
+                <input type="button" class="btn btn-default" ng-click="addNumber(3);" value="3">
+              </div>
+              <div>
+                <input type="button" class="btn btn-default" ng-click="addNumber(4);" value="4">
+                <input type="button" class="btn btn-default" ng-click="addNumber(5);"value="5">
+                <input type="button" class="btn btn-default" ng-click="addNumber(6);"value="6">
+              </div>
+
+              <div>
+                <input type="button" class="btn btn-default" ng-click="addNumber(7);" value="7">
+                <input type="button" class="btn btn-default" ng-click="addNumber(8);" value="8">
+                <input type="button" class="btn btn-default" ng-click="addNumber(9);" value="9">
+              </div>
+
+              <div class="zeroButton">
+                <input type="button" class="btn btn-default" ng-click="number = 0" value="0">
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
